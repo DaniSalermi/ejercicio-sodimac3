@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HeroService } from "src/app/services/hero.service";
+import { HeroService } from "../../services/hero.service";
 import { FormControl } from "@angular/forms";
 
 @Component({
