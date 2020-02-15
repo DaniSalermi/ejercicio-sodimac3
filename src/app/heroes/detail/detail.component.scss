@@ -1,0 +1,76 @@
+.back {
+  padding: 10px 20px;
+  font-size: 20px;
+
+  a {
+    color: blueviolet;
+    text-decoration: none;
+    background-color: white;
+    color: #304352;
+    font-size: 30px;
+    border-radius: 12px;
+    border: 1px solid #6c03b6;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    height: 10px;
+    padding: 4px 20px;
+    &:hover {
+      color: white;
+      background-color: #6c03b6;
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 10px 20px;
+  height: 90vh;
+
+  .image {
+    grid-area: 1 / 1 / 6 / 3;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+  }
+  .data {
+    grid-area: 4 / 2 / 7 / 5;
+    margin-left: 50px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    box-shadow: -11px -4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        .name {
+          text-transform: uppercase;
+          margin-bottom: 4px;
+          font-size: 18px;
+        }
+
+        .value {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  > .name {
+    grid-area: 1 / 3 / 3 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+}

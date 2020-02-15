@@ -1,0 +1,30 @@
+<div class="search">
+  <input type="text" [formControl]="search" (keyup.enter)="searchHero()" />
+  <div class="search">
+    <div class="button" (click)="searchHero()">
+      Search
+    </div>
+  </div>
+</div>
+
+<div class="list">
+  <ng-container *ngFor="let hero of heroes">
+    <a [routerLink]="['hero', hero.id]">
+      <div class="item">
+        <div class="photo">
+          <img [src]="hero.image.url" [alt]="hero.name" />
+        </div>
+        <div class="name">
+          {{ hero.name }}
+        </div>
+      </div>
+    </a>
+  </ng-container>
+
+  <div class="no-result" *ngIf="error">
+    <div class="title">
+      Results no found for <i class="hint">{{ search.value }}</i
+      >, please try with Iron Man
+    </div>
+  </div>
+</div>

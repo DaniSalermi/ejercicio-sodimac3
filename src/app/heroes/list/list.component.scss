@@ -1,0 +1,92 @@
+.search {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    font-family: "Odibee Sans", cursive;
+    font-size: 26px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 2px solid #304352;
+    width: 70%;
+    margin-right: 20px;
+    height: 40px;
+  }
+
+  .search {
+    background-color: white;
+    color: #304352;
+    font-size: 30px;
+    border-radius: 12px;
+    border: 1px solid #6c03b6;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    height: 10px;
+    &:hover {
+      color: white;
+      background-color: #6c03b6;
+    }
+  }
+}
+
+.list {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 30px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .item {
+    border-radius: 20px;
+    background: linear-gradient(to right, #4b134f, #c94b4b);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(3n) {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    }
+    &:nth-child(2n) {
+      background: linear-gradient(to right, #03001e, #7303c0, #ec38bc);
+    }
+
+    .photo {
+      img {
+        max-height: 45vh;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+
+    .name {
+      font-size: 50px;
+      padding: 12px;
+      color: white;
+    }
+  }
+
+  .no-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: 1 / 1 / 2 / 4;
+
+    .hint {
+      color: #6c03b6;
+    }
+
+    .title {
+      font-size: 40px;
+    }
+  }
+}

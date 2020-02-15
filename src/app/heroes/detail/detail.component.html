@@ -1,0 +1,88 @@
+<div class="back">
+  <a routerLink="/"> Go Back</a>
+</div>
+<div class="hero">
+  <div
+    class="image"
+    [ngStyle]="{
+      backgroundImage: detail.image ? 'url(' + detail.image.url + ')' : ''
+    }"
+  ></div>
+  <div class="data">
+    <div class="biography">
+      <div class="list">
+        <div class="item">
+          <div class="name">Full name</div>
+          <div class="value">
+            {{ detail.biography && detail.biography["full-name"] }}
+          </div>
+        </div>
+        <div class="item">
+          <div class="name">place of birth</div>
+          <div class="value">
+            {{ detail.biography && detail.biography["place-of-birth"] }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="appearance">
+      <div class="list">
+        <div class="item">
+          <div class="name">Height</div>
+          <div class="value">
+            {{ detail.appearance && detail.appearance.height[1] }}
+          </div>
+        </div>
+        <div class="item">
+          <div class="name">weight</div>
+          <div class="value">
+            {{ detail.appearance && detail.appearance.weight[1] }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="list">
+        <div class="item">
+          <div class="name">intelligence</div>
+          <div class="value">
+            {{ detail.powerstats && detail.powerstats.intelligence }}
+          </div>
+        </div>
+        <div class="item">
+          <div class="name">strength</div>
+          <div class="value">
+            {{ detail.powerstats && detail.powerstats.strength }}
+          </div>
+        </div>
+        <div class="item">
+          <div class="name">speed</div>
+          <div class="value">
+            {{ detail.powerstats && detail.powerstats.speed }}
+          </div>
+        </div>
+        <div class="item">
+          <div class="name">durability</div>
+          <div class="value">
+            {{ detail.powerstats && detail.powerstats.durability }}
+          </div>
+        </div>
+        <div class="item">
+          <div class="name">power</div>
+          <div class="value">
+            {{ detail.powerstats && detail.powerstats.power }}
+          </div>
+        </div>
+        <div class="item">
+          <div class="name">combat</div>
+          <div class="value">
+            {{ detail.powerstats && detail.powerstats.combat }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="name">
+    {{ detail.name }}
+  </div>
+</div>
