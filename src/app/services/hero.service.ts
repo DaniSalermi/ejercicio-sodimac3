@@ -1,12 +1,11 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-
 @Injectable({
   providedIn: "root"
 })
 export class HeroService {
   private token = "185566636027468";
-  private url = `https://superheroapi.com/api/${this.token}`;
+  private url = `/api/${this.token}`;
   constructor(private http: HttpClient) {}
 
   getHeroes(name) {

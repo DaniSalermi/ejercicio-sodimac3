@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://superheroapi.com",
+    "secure": false,
+    "logLevel": "debug",
+    "headers": { "host": "superheroapi.com" }
+  }
+}
